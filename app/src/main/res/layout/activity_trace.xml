@@ -27,10 +27,9 @@
         <!-- Validate button -->
         <Button
             android:id="@+id/previouseButton"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="👈"
+            android:text="👈 Previous"
             android:textSize="16sp"
             android:textStyle="bold"
             android:backgroundTint="#78C8DD"
@@ -41,10 +40,9 @@
         <!-- Reset button -->
         <Button
             android:id="@+id/nextButton"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="👉"
+            android:text="👉 Next"
             android:textStyle="bold"
             android:textSize="16sp"
             android:backgroundTint="#D844C5"
@@ -90,9 +88,9 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="🚪"
+        android:text="Exit\n🚪"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="16sp"
         android:backgroundTint="#FF9800"
         android:textColor="#ffffff"
         android:layout_margin="15dp"/>
@@ -103,9 +101,9 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="↺"
+        android:text="Reload ↺"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="16sp"
         android:backgroundTint="#FF4444"
         android:textColor="#ffffff"
         android:layout_margin="15dp"/>
@@ -116,8 +114,8 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="👀"
-        android:textSize="30sp"
+        android:text="Correct 👀"
+        android:textSize="16sp"
         android:backgroundTint="#4CAF50"
         android:textColor="#ffffff"
         android:layout_margin="15dp"/>

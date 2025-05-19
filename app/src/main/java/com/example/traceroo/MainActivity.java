@@ -67,14 +67,14 @@ public class MainActivity extends AppCompatActivity {
         DialogHelper.showDialog(
                 this,
                 R.drawable.ic_stop,     // Icône du dialogue
-                "Attends !",            // Titre
-                "Tu veux quitter le jeu ?", // Message
-                "Oui",                  // Texte bouton positif
+                "Wait !",            // Titre
+                "Do you want to quit the game?", // Message
+                "Yes",                  // Texte bouton positif
                 () -> {
                     // Si l'utilisateur clique sur "Oui", on appelle la méthode parente pour quitter
                     super.onBackPressed();
                 },
-                "Non",                  // Texte bouton négatif
+                "No",                  // Texte bouton négatif
                 null                    // Action si "Non" : rien (le dialogue se ferme)
         );
     }

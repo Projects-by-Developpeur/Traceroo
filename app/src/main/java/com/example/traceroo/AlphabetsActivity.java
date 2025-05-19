@@ -55,9 +55,9 @@ public class AlphabetsActivity extends AppCompatActivity {
             DialogHelper.showDialog(
                     this,
                     R.drawable.ic_stop, // Icône d'alerte
-                    "Réinitialiser le jeu ↺", // Titre du dialogue
-                    "Es-tu sûr de vouloir tout recommencer ?\nTous les scores seront perdus !", // Message
-                    "Oui, tout réinitialiser", // Texte du bouton positif
+                    "Reset the game ↺", // Titre du dialogue
+                    "Are you sure you want to reset the game?\n All scores will be lost!", // Message
+                    "Yes, reset everything\n", // Texte du bouton positif
                     () -> {
                         // Action si confirmé : réinitialise les scores
                         PrefHelper.resetGame(this);
@@ -65,7 +65,7 @@ public class AlphabetsActivity extends AppCompatActivity {
                         // Recharge l'adaptateur pour actualiser l'affichage
                         recyclerAlphabet.setAdapter(adapter);
                     },
-                    "Annuler", // Bouton négatif
+                    "Cancel", // Bouton négatif
                     null // Pas d'action si l'utilisateur annule
             );
         });
@@ -80,11 +80,11 @@ public class AlphabetsActivity extends AppCompatActivity {
         DialogHelper.showDialog(
                 this,
                 R.drawable.ic_stop,  // Icône d’alerte
-                "Attends !",         // Titre
-                "Tu veux quitter le jeu ?", // Message
-                "Oui",               // Si oui → quitter l'activité
+                "Wait!",         // Titre
+                "Do you want to quit the game?", // Message
+                "Yes",               // Si oui → quitter l'activité
                 () -> super.onBackPressed(),
-                "Non",               // Sinon → rester dans l'activité
+                "No",               // Sinon → rester dans l'activité
                 null
         );
     }

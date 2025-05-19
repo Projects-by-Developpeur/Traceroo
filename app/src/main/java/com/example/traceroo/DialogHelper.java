@@ -85,8 +85,8 @@ public class DialogHelper {
         showDialog(
                 context,
                 R.drawable.ic_lock,
-                "Lettre verrouillée 🔒",
-                "La lettre " + letter + " est encore verrouillée.\nPratique les lettres précédentes pour la débloquer !",
+                "Letter locked \uD83D\uDD12\n",
+                "The letter \" + letter + \" is still locked.\\nPractice the previous letters to unlock it!",
                 "OK",
                 null,
                 null,

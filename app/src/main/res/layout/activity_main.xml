@@ -46,6 +46,18 @@
         android:textStyle="bold"
         android:fontFamily="@font/dynapuff"/>
 
+    <TextView
+        android:layout_above="@+id/commencer"
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Welcome to creative children 🧠"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:fontFamily="@font/dynapuff"/>
+
     <Button
         android:fontFamily="@font/dynapuff"
         android:layout_alignParentBottom="true"
@@ -58,7 +70,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:padding="15dp"
-        android:text="Commencer l'apprentissage 👆"
+        android:text="Start your learning 👆"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"

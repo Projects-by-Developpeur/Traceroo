@@ -54,14 +54,14 @@ public class TraceActivity extends AppCompatActivity {
                 DialogHelper.showDialog(
                         TraceActivity.this,
                         R.drawable.ic_stop,
-                        "Attends !",
-                        "Tu veux retourner à l'accueil ?",
-                        "Oui",
+                        "Wait !",
+                        "Do you want to quit the game?",
+                        "Yes",
                         () -> {
                             startActivity(new Intent(TraceActivity.this, AlphabetsActivity.class));
                             finish(); // Ferme l'activité actuelle
                         },
-                        "Non",
+                        "No",
                         null
                 );
             }
@@ -98,9 +98,9 @@ public class TraceActivity extends AppCompatActivity {
                 DialogHelper.showDialog(
                         this,
                         R.drawable.bravo,
-                        "Bravo !",
-                        "Tu as bien tracé la lettre !",
-                        "👉 Lettre suivante",
+                        "Well done!",
+                        "You traced the letter well!\n",
+                        "👉 Next letter",
                         () -> {
                             if (letter.charAt(0) < 'Z') {
                                 letter = String.valueOf((char) (letter.charAt(0) + 1));
@@ -112,9 +112,10 @@ public class TraceActivity extends AppCompatActivity {
                                 DialogHelper.showDialog(
                                         this,
                                         R.drawable.ic_trophy, // Icône de trophée
-                                        "Bravo ! 🎉",
-                                        "Tu as fini toutes les lettres ! \nTon score= " +(PrefHelper.getScore(this) + " 🏆")+ "  \nExcellent travail 👏",
-                                        "Retour",
+                                        "Congrats! 🎉",
+                                        "You've finished all the letters! \nYour score = " + (PrefHelper.getScore(this) + " 🏆") + "  \nExcellent work 👏"
+                                        ,
+                                        "Back",
                                         () -> {
                                             startActivity(new Intent(this, AlphabetsActivity.class));
                                         },
@@ -123,7 +124,7 @@ public class TraceActivity extends AppCompatActivity {
                                 );
                             }
                         },
-                        "↺ Réessayer",
+                        "↺ Try again",
                         () -> drawView.clearCanvas() // Réinitialise la zone de dessin
                 );
             } else {
@@ -132,9 +133,10 @@ public class TraceActivity extends AppCompatActivity {
                 DialogHelper.showDialog(
                         this,
                         R.drawable.ic_tryagain, // Icône pour l'erreur
-                        "Essayer encore 😅",
-                        "Tu dois mieux tracer la lettre.\nRéessaie encore une fois !",
-                        "↺ Réessayer",
+                        "Try again 😅",
+                        "You need to trace the letter better.\n" +
+                                "Try one more time!\n",
+                        "↺ Try again",
                         () -> drawView.clearCanvas(), // Efface le dessin pour une nouvelle tentative
                         null,
                         null
@@ -190,9 +192,9 @@ public class TraceActivity extends AppCompatActivity {
             DialogHelper.showDialog(
                     this,
                     R.drawable.ic_trophy, // Icône de trophée
-                    "Bravo ! 🎉",
-                    "Tu as fini toutes les lettres !\nExcellent travail 👏",
-                    "Retour",
+                    "Congrats! 🎉",
+                    "You've finished all the letters! \nExcellent work 👏",
+                    "Back",
                     () -> {
                         SoundHelper.stopSound();
                         startActivity(new Intent(this, AlphabetsActivity.class)); // Retour à l'écran principal
@@ -222,8 +224,9 @@ public class TraceActivity extends AppCompatActivity {
             DialogHelper.showDialog(
                     this,
                     R.drawable.ic_lock,
-                    "Oups ! 😅",
-                    "Tu ne peux pas revenir en arrière.\nContinue à apprendre !",
+                    "Oops ! 😅",
+                    "You can’t go back.\n" +
+                            "Keep learning!",
                     "OK",
                     null,
                     null,
